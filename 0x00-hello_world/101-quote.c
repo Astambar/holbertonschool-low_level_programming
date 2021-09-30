@@ -1,16 +1,17 @@
+#include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
 /**
- *main - prints the phrase
- * "and that piece of art is useful" - Dora Korpar, 2015-10-19
- * Return: 0 if exited properly, non-zero otherwise
+ * main - prints exactly "and that piece of art is useful"
+ * - Dora Korpar, 2015-10-19",
+ * followed by a new line, to the standard error.
+ * Return: Always 0 (Success)
  */
 int main(void)
-{
-	char chaine[] = "\"and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-/*
-*@chaine[] - phrase stocker
-*/
-	chaine = getchar();
-	putchar(chaine);
-	return (0);
+{	
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
