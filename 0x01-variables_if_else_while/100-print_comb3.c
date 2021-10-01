@@ -9,8 +9,8 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int c = 49;
-	int f = 48;
+	int c = 48;
+	int f = 49;
 
 	while (c < 57)
 	{
