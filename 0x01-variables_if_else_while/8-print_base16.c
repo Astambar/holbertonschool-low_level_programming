@@ -9,10 +9,10 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int c = 97;
-	int h = 48;
+	int c = 48;
+	int h = 97;
 
-	while (c <= 102)
+	while (c <= 58)
 	{
 		putchar(c);
 		c++;
