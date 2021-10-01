@@ -14,8 +14,8 @@ int main(void)
 	while (c < 58)
 	{
 		putchar(c);
-        putchar(130);
-        putchar(32);
+		putchar(130);
+		putchar(32);
 		c++;
 	}
 	putchar('\n');
