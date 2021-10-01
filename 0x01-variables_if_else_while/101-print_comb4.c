@@ -13,7 +13,7 @@ int main(void)
 	int f = 49;
 	int g = 50;
 
-	while (c < 57)
+	while (c < 58)
 	{
 		while (f < 58)
 		{
