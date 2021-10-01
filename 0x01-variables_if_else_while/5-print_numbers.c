@@ -9,14 +9,11 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int c = 'a';
+	int c = 0;
 
-	while (c <= 'z')
+	while (c < 10)
 	{
-	if ((c != 'q') && (c != 'e'))
-	{
-		putchar(c);
-	}
+		printf("%d", c);
 	c++;
 	}
 
