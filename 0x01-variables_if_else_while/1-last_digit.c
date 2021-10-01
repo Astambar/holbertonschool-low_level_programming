@@ -7,7 +7,6 @@
  * Return: Always 0 (Success)
  */
 /* betty style doc for function main goes there */
-
 int main(void)
 {
 	int n;
@@ -15,17 +14,20 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if (n == 0)
-	{
-		printf("is zero");
-	}
-	else if (n < 0)
-	{
-		printf("is negative");
-	}
-	else
-	{
-		printf("is positive");
-	}
+    printf("Last digit of %d is %d ", n, n % 10);
+    if(n > 5)
+    {
+        printf("and is greater than 5");
+    }
+    else if(n == 0)
+    {
+        printf("and is 0");
+    }
+    else if(n < 6)
+    {
+        printf("and is less than 6 and not 0");
+    
+    }
+    printf("%d\n", n);
 	return (0);
 }
