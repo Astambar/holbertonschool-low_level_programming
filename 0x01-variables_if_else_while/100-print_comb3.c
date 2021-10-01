@@ -14,22 +14,25 @@ int main(void)
 
 	while (c < 57)
 	{
-		
-			while (f < 58)
+		while (f < 58)
+		{
+		if (f > c)
+		{
+			putchar(c);
+			putchar(f);
+			if (c != 56 || f != 57)
 			{
-				putchar(c);
-				putchar(f);
-				if (f != 57 && c != 56)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-				f++;
+				putchar(',');
+				putchar(' ');
 			}
+			f++;
+		}
 
 		f = 48;
 		c++;
+		}
 	}
 	putchar('\n');
 	return (0);
+
 }
