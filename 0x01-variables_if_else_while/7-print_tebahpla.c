@@ -9,9 +9,9 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int c = 'z';
+	int c = 122;
 
-	while (c <= 'a')
+	while (c <= 97)
 	{
 		putchar(c);
 		c--;
