@@ -17,8 +17,7 @@ int main(void)
 	{
 		while (f < 58)
 		{
-		if (f > c)
-		{
+
 			while (g < 58)
 			{
 				if (c != g || c != f || f != g)
@@ -37,7 +36,6 @@ int main(void)
 				g++;
 			}
 
-		}
 		f++;
 		}
 		f = 48;
