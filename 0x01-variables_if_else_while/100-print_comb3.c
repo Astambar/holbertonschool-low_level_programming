@@ -18,18 +18,14 @@ int main(void)
 		{
 			while (f < 58)
 			{
-				if (f > c)
-				{
 				putchar(c);
 				putchar(f);
-				if (f != 57 || c != 56)
+				if (f != 57 && c != 56)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 				f++;
-				}
-
 			}
 		}
 		f = 48;
