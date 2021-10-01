@@ -23,6 +23,9 @@ int main(void)
 			{
 				if (c != g || c != f || f != g)
 				{
+					putchar(c);
+					putchar(f);
+					putchar(g);
 					if (c != 56 || f != 57 || g != 55)
 					{
 						putchar(',');
