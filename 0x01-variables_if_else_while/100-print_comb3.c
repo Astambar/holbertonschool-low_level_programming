@@ -25,12 +25,13 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
-			f++;
+			
 		}
-
+		f++;
+		}
 		f = 48;
 		c++;
-		}
+		
 	}
 	putchar('\n');
 	return (0);
