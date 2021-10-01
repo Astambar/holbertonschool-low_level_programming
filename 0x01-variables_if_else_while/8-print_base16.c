@@ -12,7 +12,7 @@ int main(void)
 	int c = 48;
 	int h = 97;
 
-	while (c <= 58)
+	while (c < 58)
 	{
 		putchar(c);
 		c++;
