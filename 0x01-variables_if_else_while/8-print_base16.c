@@ -9,14 +9,19 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	char c = 'z';
+	int c = 97;
+	int h = 48;
 
-	while (c >= 'a')
+	while (c <= 102)
 	{
 		putchar(c);
-		c--;
+		c++;
 	}
-
+	while (h <= 102)
+	{
+		putchar(h);
+		h++;
+	}
 	putchar('\n');
 	return (0);
 }
