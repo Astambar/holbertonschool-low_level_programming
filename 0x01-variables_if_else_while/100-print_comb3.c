@@ -14,8 +14,7 @@ int main(void)
 
 	while (c < 57)
 	{
-		if (c < 57)
-		{
+		
 			while (f < 58)
 			{
 				putchar(c);
@@ -27,7 +26,7 @@ int main(void)
 				}
 				f++;
 			}
-		}
+
 		f = 48;
 		c++;
 	}
