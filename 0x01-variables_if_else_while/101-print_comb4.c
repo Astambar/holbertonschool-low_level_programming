@@ -39,6 +39,7 @@ int main(void)
 		f++;
 		}
 		f = 48;
+		g = 48;
 		c++;
 
 	}
