@@ -16,8 +16,7 @@ int main(void)
 	{
 		while (f < 100)
 		{
-			if (c < f)
-			{
+
 				putchar((c / 10) + a);
 				putchar((c % 10) + a);
 				putchar(' ');
@@ -28,7 +27,6 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			}
 			f++;
 		}
 		c++;
