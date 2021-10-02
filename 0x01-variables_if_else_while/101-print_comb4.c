@@ -13,9 +13,9 @@ int main(void)
 	int f = 49;
 	int g = 50;
 
-	while (c < 58)
+	while (c < 56)
 	{
-		while (f < 58)
+		while (f < 57)
 		{
 
 			while (g < 58)
