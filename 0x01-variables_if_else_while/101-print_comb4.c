@@ -35,10 +35,10 @@ int main(void)
 
 				g++;
 			}
-		g = f+1;
+		g = f + 1;
 		f++;
 		}
-		f = c+1;
+		f = c + 1;
 		c++;
 
 	}
