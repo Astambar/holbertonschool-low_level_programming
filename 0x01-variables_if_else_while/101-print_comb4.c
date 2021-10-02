@@ -23,8 +23,8 @@ int main(void)
 				if (c != g && c != f && f != g)
 				{
 					putchar(c);
-					putchar(f);
-					putchar(g);
+					putchar(f+c);
+					putchar(g+f);
 					if (c != 55 || f != 56 || g != 57)
 					{
 						putchar(',');
@@ -35,10 +35,10 @@ int main(void)
 
 				g++;
 			}
-		g = 48;
+		g = f+1;
 		f++;
 		}
-		f = 48;
+		f = c+1;
 		c++;
 
 	}
