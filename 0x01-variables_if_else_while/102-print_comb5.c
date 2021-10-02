@@ -18,11 +18,11 @@ int main(void)
 		{
 			if (c < f)
 			{
-				putchar((c / 10) + 48);
-				putchar((c % 10) + 48);
+				putchar((c / 10) + a);
+				putchar((c % 10) + a);
 				putchar(' ');
-				putchar((f / 10) + 48);
-				putchar((f % 10) + 48);
+				putchar((f / 10) + a);
+				putchar((f % 10) + a);
 				if (c != 98 || f != 99)
 				{
 					putchar(',');
