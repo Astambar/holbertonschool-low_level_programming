@@ -12,11 +12,11 @@ int main(void)
 
 	int c = 0, f = 0, a = 48;
 
-	while (c < 100)
+	while (c < 99)
 	{
 		while (f < 100)
 		{
-
+			
 				putchar((c / 10) + a);
 				putchar((c % 10) + a);
 				putchar(' ');
