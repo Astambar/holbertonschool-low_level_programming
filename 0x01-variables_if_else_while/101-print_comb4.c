@@ -20,7 +20,7 @@ int main(void)
 
 			while (g < 58)
 			{
-				if (c != g || c != f || f != g)
+				if (c != g && c != f && f != g)
 				{
 					putchar(c);
 					putchar(f);
