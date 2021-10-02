@@ -10,7 +10,7 @@
 int main(void)
 {
 
-	int c = 0, f = 0, a = 48;
+	int c = 0, f = 1, a = 48;
 
 	while (c < 99)
 	{
