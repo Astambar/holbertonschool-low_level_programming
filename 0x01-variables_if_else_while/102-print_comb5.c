@@ -16,18 +16,18 @@ int main(void)
 	{
 		while (f < 100)
 		{
-			
-				putchar((c / 10) + a);
-				putchar((c % 10) + a);
+
+			putchar((c / 10) + a);
+			putchar((c % 10) + a);
+			putchar(' ');
+			putchar((f / 10) + a);
+			putchar((f % 10) + a);
+			if (c != 98 || f != 99)
+			{
+				putchar(',');
 				putchar(' ');
-				putchar((f / 10) + a);
-				putchar((f % 10) + a);
-				if (c != 98 || f != 99)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			f++;
+			}
+		f++;
 		}
 		f = c + 2;
 		c++;
