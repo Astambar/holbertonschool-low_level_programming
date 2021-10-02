@@ -39,7 +39,6 @@ int main(void)
 		f++;
 		}
 		f = 48;
-		
 		c++;
 
 	}
