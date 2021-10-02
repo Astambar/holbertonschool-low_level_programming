@@ -29,6 +29,7 @@ int main(void)
 				}
 			f++;
 		}
+		f = c + 2;
 		c++;
 	}
 	putchar('\n');
