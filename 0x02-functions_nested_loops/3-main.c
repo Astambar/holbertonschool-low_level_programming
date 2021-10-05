@@ -1,4 +1,4 @@
-#include "3-islower.c"
+#include "main.h"
 /**
  * main - check the code.
  *
