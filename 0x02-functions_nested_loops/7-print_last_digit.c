@@ -7,5 +7,5 @@
 int  print_last_digit(int a){
 
     _putchar(((a % 10)+48));
-    return ((a % 10)+48);
+    return (a);
 }
