@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
- * main - check the code
- *
+ * _islower - check the code
+ * @a: - letter
  * Return: Always 0.
  */
+
 int _islower(int a)
 {
-        return (a >= 'a' && a <= 'z');
+	return (a >= 'a' && a <= 'z');
 }

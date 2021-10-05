@@ -6,16 +6,17 @@
  */
 /* betty style doc for function main goes there */
 int main(void)
-{   
-    char chaine[]="_putchar";
-    int i=0;
-	
-    
-    while(chaine[i] != '\0'){
-        _putchar(chaine[i]);
-        i++;
-    }
-    _putchar('\n');
+{
+	char chaine[] = "_putchar";
+	int i = 0;
+
+
+	while (chaine[i] != '\0')
+	{
+		_putchar(chaine[i]);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 
 }
