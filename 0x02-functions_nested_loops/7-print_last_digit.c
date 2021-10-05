@@ -1,25 +1,26 @@
 #include "main.h"
 /**
- * main - check the code
- *
+ * print_last_digit - check the code
+ * @a: - letter
  * Return: Always 0.
  */
-int  print_last_digit(int a){
+int print_last_digit(int a)
+{
 
-   	int n;
+	int n;
 
 	if (a < 0)
-    {
-        a = -a;
-    }
+	{
+		a = -a;
+	}
 
 	n = a % 10;
 
 	if (n < 0)
-    {
-        n = -n;
-    }
-    
+	{
+		n = -n;
+	}
+
 	_putchar(n + '0');
 
 	return (n);
