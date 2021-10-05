@@ -8,7 +8,6 @@
 int main(void)
 {   
     char chaine[]="_putchar";
-    // int size_chaine=sizeof(chaine) / sizeof(char);
     int i=0;
 	
     
