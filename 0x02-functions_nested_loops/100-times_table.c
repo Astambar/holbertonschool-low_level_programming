@@ -1,31 +1,47 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * print_times_table - prints the n times table, starting with 0
  * @n: number of the times table
  */
+void print_times_table(int n)
+{
+	int i, j, k;
 
- void print_times_table(int a)
- {
-     	int i, j;
-
-	if (a <= 98)
+	if (n >= 0 && n <= 15)
 	{
-		for (i = a; i <= 98; i++)
+		for (i = 0; i <= n; i++)
 		{
-			if (i != 98)
-				printf("%d, ", i);
-			else if (i == 98)
-				printf("%d\n", i);
-		}
-	} else if (a >= 98)
-	{
-		for (j = a; j >= 98; j--)
-		{
-			if (j != 98)
-				printf("%d, ", j);
-			else if (j == 98)
-				printf("%d\n", j);
+			for (j = 0; j <= n; j++)
+			{
+				k = j * i;
+				if (j == 0)
+				{
+					_putchar(k + '0');
+				} else if (k < 10 && j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(k + '0');
+				} else if (k >= 10 && k < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
+				} else if (k >= 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((k / 100) + '0');
+					_putchar(((k / 10) % 10) + '0');
+					_putchar((k % 10) + '0');
+				}
+			}
+			_putchar('\n');
 		}
 	}
- }
+}
