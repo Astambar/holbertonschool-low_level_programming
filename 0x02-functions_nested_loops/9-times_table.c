@@ -20,15 +20,17 @@ void times_table(void)
                     _putchar(h+48);
                     if((i != 0 || i != 1)&& j != 9){
                         _putchar(',');
+                        _putchar(' ');
                     }
                 
                 }
                 else
                 {
-                _putchar((h / 10) + 48);
-                _putchar((h % 10) + 48);
-                if(j != 9 ){
-                _putchar(',');
+                    _putchar((h / 10) + 48);
+                    _putchar((h % 10) + 48);
+                    if(j != 9 ){
+                    _putchar(',');
+                    _putchar(' ');
                 }
 
                 }
