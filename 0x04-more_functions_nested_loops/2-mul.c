@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isdigit - check the code.
+ * mul - check the code.
  * @a: - verif uppercase
  * @b: - verif uppercase
  * Return: Always 0.
