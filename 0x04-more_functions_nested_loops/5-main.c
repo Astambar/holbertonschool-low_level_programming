@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
 int i = 0, j = 0;
 while(j++ <10)
