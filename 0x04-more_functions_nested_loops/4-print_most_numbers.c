@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_most_numbers - check the code.
@@ -14,7 +13,7 @@ void print_most_numbers(void)
 	{
 		if (i != 2 && i != 4)
 		{
-		_putchar(i + '0';
+		_putchar(i + 47;
 		}
 	}
 	_putchar('\n');
