@@ -9,17 +9,33 @@
 
 void more_numbers(void)
 {
-int i = 0, j = 0;
-while(j++ <10)
-{
-	while (i++ < 15)
-	{	if(i != 2 && i != 4)
+int i = 0, dizaine = 0 , total = 0, a = 0;
+
+	while(a++ < 10)
+	{
+		i = 0;
+		dizaine = 0;
+		total = 0;
+		while (i++ < 10 && total++ < 15)
 		{
-			_putchar(i+47);
+			if(i == 10)
+			{
+				dizaine++;
+				i = 0;
+			}
+			if(total != 2 && total != 4)
+			{
+				if(dizaine > 0)
+				{
+					_putchar(dizaine+48);
+				}
+
+					_putchar(i+48);
+
+			}
 		}
-	}
 	_putchar('\n');
-}
+	}
 
 
 }
