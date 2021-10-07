@@ -16,7 +16,7 @@ int i = 0, dizaine = 0 , total = 0, a = 0;
 		i = 0;
 		dizaine = 0;
 		total = 0;
-		while (i++ < 10 && total++ < 15)
+		while (i++ < 10 && total++ < 14)
 		{
 			if(i == 10)
 			{
@@ -29,13 +29,10 @@ int i = 0, dizaine = 0 , total = 0, a = 0;
 				{
 					_putchar(dizaine+48);
 				}
-
 					_putchar(i+48);
-
 			}
 		}
 	_putchar('\n');
 	}
-
 
 }
