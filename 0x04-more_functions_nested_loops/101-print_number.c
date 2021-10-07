@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _isupper - check the code.
- * @c: - verif uppercase
+ * print_number - check the code.
+ * @n: - verif uppercase
  * Return: Always 0.
  */
 
@@ -14,15 +14,16 @@ void print_number(int n)
 	{
 		a = -n;
 		_putchar('-');
-	} else
+	}
+	else
 	{
 		a = n;
 	}
-	
-	if (a / 10)
-		{
-			print_number(a / 10);
-		}
 
-		_putchar((a % 10) + '0');
+	if (a / 10)
+	{
+		print_number(a / 10);
+	}
+
+	_putchar((a % 10) + '0');
 }
