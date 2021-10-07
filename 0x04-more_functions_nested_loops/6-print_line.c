@@ -2,18 +2,18 @@
 #include <stdio.h>
 
 /**
- * _isupper - check the code.
- * @c: - verif uppercase
+ * print_line - check the code.
+ * @n: - verif uppercase
  * Return: Always 0.
  */
 
 void print_line(int n)
 {
-int i = 0;
+	int i = 0;
 
-while (i++ < n)
-{
-    _putchar(n);
-}
-_putchar('\n');
+	while (i++ < n)
+	{
+		_putchar(n);
+	}
+	_putchar('\n');
 }

@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
- * _isupper - check the code.
- * @c: - verif uppercase
+ * print_diagonal - check the code.
+ * @n: - verif uppercase
  * Return: Always 0.
  */
 
 void print_diagonal(int n)
 {
 	int i, j;
+
 	if (n <= 0)
 	{
 		_putchar('\n');
-	} 
+	}
 	else
 	{
 		for (i = 0 ; i < n; i++)
@@ -28,7 +29,7 @@ void print_diagonal(int n)
 					_putchar(' ');
 				}
 			}
-		_putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
