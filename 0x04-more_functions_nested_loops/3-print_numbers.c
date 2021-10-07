@@ -16,5 +16,5 @@ while (i++ < 10)
 {
     _putchar(i+47);
 }
-_putchar('\n')
+_putchar('\n');
 }
