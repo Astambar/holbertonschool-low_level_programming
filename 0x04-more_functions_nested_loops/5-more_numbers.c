@@ -9,30 +9,22 @@
 
 void more_numbers(void)
 {
-int i = -1, dizaine = 0 , total = 0, a = 0;
+int i = 0, j = 0;
 
-	while(a++ < 10)
+	for (i = 0; i < 10; i++)
 	{
-		i = -1;
-		dizaine = 0;
-		total = 0;
-		while (i++ < 10 && total++ < 14)
+		for (j = 0; j < 15; j++)
 		{
-			if(i == 10)
+			if(j != 2 && j != 4)
 			{
-				dizaine++;
-				i = 0;
-			}
-			if(total != 2 && total != 4)
-			{
-				if(dizaine > 0)
+				if (j >= 10)
 				{
-					_putchar(dizaine+48);
+					_putchar(j / 10 + '0');
 				}
-					_putchar(i+48);
+				_putchar(j % 10 + '0');
 			}
-		}
-	_putchar('\n');
-	}
 
+		}
+		_putchar('\n');
+	}
 }
