@@ -1,22 +1,20 @@
 #include "main.h"
 #include <string.h> 
+#include <stdio.h>
 /**
 * _strlen - reset value pointer
 * @s: pointer
 */
 void puts2(char *str)
 {
-	int i, len, temp;  
-    len = strlen(s);
+	int i, len;  
+    len = strlen(str);
 
-	for (i = 0; i < len/2; i++)  
+	for (i = 0; i < len; i++)  
     {  if(i%2 == 0)
 		{
-		temp = s[i];  
-        s[i] = s[len - i - 1];  
-        s[len - i - 1] = temp; 
+			_putchar(str[i]);
 		}
  
-    }  
-printf("%s",s)
+	}
 }
