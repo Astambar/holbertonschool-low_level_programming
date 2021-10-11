@@ -19,7 +19,7 @@ int _atoi(char *s)
 	{
 		len++;
 	}
-
+	
 	for (i = 0;i < len && f == 0; i++)
 	{
 		if (s[i] == '-')
