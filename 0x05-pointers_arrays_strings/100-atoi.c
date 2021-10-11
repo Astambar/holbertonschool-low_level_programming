@@ -1,8 +1,9 @@
 #include "main.h"
-#include <string.h> 
+#include <string.h>
 #include <stdio.h>
 /**
 * _atoi - reset value pointer
+* Return: Always 0.
 * @s: pointer
 */
 int _atoi(char *s)
@@ -14,18 +15,17 @@ int _atoi(char *s)
 	f = 0;
 	digit = 0;
 
-	for (len = 0; s[len] != '\0'; len ++)
+	for (len = 0; s[len] != '\0'; len++)
 	{
 		len++;
 	}
 
-	for (i = 0;i < len && f == 0; i++)
+	for (i = 0; i < len && f == 0; i++)
 	{
 		if (s[i] == '-')
 		{
 			count_negative_symbol++;
 		}
-			
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -34,7 +34,7 @@ int _atoi(char *s)
 			{
 				digit = -digit;
 			}
-				
+
 			result = result * 10 + digit;
 			f = 1;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
