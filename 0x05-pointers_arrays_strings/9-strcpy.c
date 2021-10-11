@@ -2,8 +2,9 @@
 #include <string.h> 
 #include <stdio.h>
 /**
-* _strlen - reset value pointer
-* @s: pointer
+* *_strcpy - reset value pointer
+* @dest: pointer
+* @src: pointer
 */
 char *_strcpy(char *dest, char *src)
 {	

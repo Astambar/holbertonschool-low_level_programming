@@ -2,8 +2,8 @@
 #include <string.h> 
 #include <stdio.h>
 /**
-* _strlen - reset value pointer
-* @s: pointer
+* puts_half - reset value pointer
+* @str: pointer
 */
 void puts_half(char *str)
 {

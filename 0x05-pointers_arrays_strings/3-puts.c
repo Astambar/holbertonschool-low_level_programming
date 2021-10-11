@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* _strlen - reset value pointer
-* @s: pointer
+* _puts - reset value pointer
+* @str: pointer
 */
 void _puts(char *str)
 {

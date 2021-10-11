@@ -2,8 +2,9 @@
 #include <string.h> 
 #include <stdio.h>
 /**
-* _strlen - reset value pointer
-* @s: pointer
+* print_array - reset value pointer
+* @a: pointer
+* @n: pointer
 */
 void print_array(int *a, int n)
 {

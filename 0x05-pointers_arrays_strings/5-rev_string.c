@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h> 
 /**
-* _strlen - reset value pointer
+* rev_string - reset value pointer
 * @s: pointer
 */
 void rev_string(char *s)

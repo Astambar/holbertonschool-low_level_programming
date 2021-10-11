@@ -2,7 +2,7 @@
 #include <string.h> 
 #include <stdio.h>
 /**
-* _strlen - reset value pointer
+* _atoi - reset value pointer
 * @s: pointer
 */
 int _atoi(char *s)

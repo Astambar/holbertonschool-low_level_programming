@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _strlen - reset value pointer
+* print_rev - reset value pointer
 * @s: pointer
 */
 void print_rev(char *s)
