@@ -1,20 +1,19 @@
 #include "main.h"
-
+#include <string.h> 
 /**
 * _strlen - reset value pointer
 * @s: pointer
 */
 void rev_string(char *s)
 {
-	int i,j=0;
+	int i, len, temp;  
+    len = strlen(s);
 
-	for (i = 0 ; s[i]!='\0'; i++);
+	for (i = 0; i < len/2; i++)  
+    {  
+        temp = s[i];  
+        s[i] = s[len - i - 1];  
+        s[len - i - 1] = temp;  
+    }  
 
-	for (i = i; i != 0; i--)
-	{
-		*s[j]=s[i - 1]
-		j++;
-	}
-	return (*s);
-	
 }
