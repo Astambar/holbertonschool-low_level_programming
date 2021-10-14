@@ -2,30 +2,26 @@
 #include <string.h>
 #include <stdio.h>
 /**
-* *_strncpy - reset value pointer
+* *_strcmp - reset value pointer
 *
 * Return: Always 0.
-* @dest: pointer
-* @src: pointer
-* @n: pointer
+* @s1: pointer
+* @s2: pointer
 */
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i;
-
-	i = 0;
-
-	while (src[i] != '\0' && i < n)
+	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
 	{
-		dest[i] = src[i];
-		i++;
+		s1++;
+		s2++;
 	}
 
-	while (i < n)
+	if (*s1 == *s2)
 	{
-		dest[i] = '\0';
-		i++;
+		return (0);
 	}
-
-	return (dest);
+	else
+	{
+		return (*s1 - *s2);
+	}
 }
