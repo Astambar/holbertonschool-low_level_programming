@@ -3,9 +3,11 @@
 #include <stdio.h>
 /**
 * *_strncpy - reset value pointer
-* 
+*
 * Return: Always 0.
-* @s: pointer
+* @dest: pointer
+* @src: pointer
+* @n: pointer
 */
 char *_strncpy(char *dest, char *src, int n)
 {

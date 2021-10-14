@@ -3,28 +3,28 @@
 #include <stdio.h>
 /**
 * *_strcat - reset value pointer
-* 
+*
 * Return: Always 0.
-* @s: pointer
+* @dest: pointer
+* @src: pointer
 */
 char *_strcat(char *dest, char *src)
 {
+int i, j;
 
-while (*src != '\0' && *dest != '\0')
-{
-	if(*dest != '\0')
-	{
-		dest++;
-	}
-	else if (*src != '\0')
-	{
-		*dest = *src  ;
-		dest++;
-		src++;
-	}
+	i = 0;
+	j = 0;
 
-}
-*dest = '\0';
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+dest[i] = '\0';
 
 return (dest);
 
