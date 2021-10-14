@@ -2,15 +2,15 @@
 #include <string.h>
 #include <stdio.h>
 /**
-* _atoi - reset value pointer
+* *_strcat - reset value pointer
 * 
 * Return: Always 0.
 * @s: pointer
 */
 char *_strcat(char *dest, char *src)
 {
-int i;
-for (i = 0 ; *src != '\0' && *dest != '\0'; i++)
+
+while (*src != '\0' && *dest != '\0')
 {
 	if(*dest != '\0')
 	{
