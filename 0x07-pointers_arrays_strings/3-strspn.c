@@ -10,7 +10,7 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, f, match;
+	int i, j, temp, match;
 
 	temp = 0;
 
@@ -32,4 +32,4 @@ unsigned int _strspn(char *s, char *accept)
 	}
 
 	return (0);
-	
+}
