@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* *_strstr - reset value pointer
+* print_diagsums - reset value pointer
 *
 * Return: Always 0.
-* @haystack: pointer
-* @needle: pointer
+* @a: pointer tableau
+* @size: taille du tableau
 */
 void print_diagsums(int *a, int size)
 {
