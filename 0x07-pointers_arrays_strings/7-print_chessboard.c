@@ -2,15 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* *_strstr - reset value pointer
+* print_chessboard - reset value pointer
 *
 * Return: Always 0.
-* @haystack: pointer
-* @needle: pointer
+* @a: pointer
 */
+
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
+
 	for (i = 0; i < 8; i++)
 	{
 		for (j = 0; j < 8; j++)

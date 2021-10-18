@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* *_strcat - reset value pointer
+* _strspn - reset value pointer
 *
 * Return: Always 0.
-* @dest: pointer
-* @src: pointer
+* @s: pointer
+* @accept: pointer
 */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -32,4 +32,5 @@ unsigned int _strspn(char *s, char *accept)
 	}
 
 	return (0);
+
 }

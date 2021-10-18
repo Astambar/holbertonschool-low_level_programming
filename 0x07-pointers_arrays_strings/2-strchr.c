@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* *_strcat - reset value pointer
+* *_strchr - reset value pointer
 *
 * Return: Always 0.
-* @dest: pointer
-* @src: pointer
+* @s: pointer
+* @c: pointer
 */
 char *_strchr(char *s, char c)
 {
@@ -13,8 +13,8 @@ char *_strchr(char *s, char c)
 		if (*s == c)
 		{
 			return (s);
-		} 
-	} while (*s++) ;
+		}
+	} while (*s++);
 
 	return (NULL);
 }
