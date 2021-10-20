@@ -5,7 +5,7 @@
  * is_prime_number - nombre premier
  * @n: nombre tester
  *
- * Return: 1 if n is a prime number, 0 if not
+ * Return: 1 si un nombre est premier, 0 sinon
  */
 int is_prime_number(int n)
 {
