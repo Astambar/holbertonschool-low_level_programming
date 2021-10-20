@@ -9,7 +9,7 @@ int actual_prime(int n, int i);
  */
 int is_prime_number(int n)
 {
-	return ((n <= 1) ? 0 : actual_prime(n, n - 1))?
+	return ((n <= 1) ? 0 : actual_prime(n, n - 1));
 }
 
 /**
