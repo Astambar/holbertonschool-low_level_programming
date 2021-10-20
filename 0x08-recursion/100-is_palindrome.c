@@ -16,7 +16,6 @@ int is_palindrome(char *s)
 	return (palindrome(s, i, j));
 }
 
-
 /**
  * palindrome - function that returns 1 if a string is a palindrome else 0
  * @s: string
