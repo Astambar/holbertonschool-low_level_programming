@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _puts_recursion - reset value pointer
+* _print_rev_recursion - reset value pointer
 *
 * Return: Always 0.
 * @s: pointer

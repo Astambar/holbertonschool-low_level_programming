@@ -1,20 +1,18 @@
 #include "main.h"
 
 /**
-* _puts_recursion - reset value pointer
+* factorial - reset value pointer
 *
 * Return: Always 0.
-* @s: pointer
+* @n: default
 */
 
 int factorial(int n)
 {
-	if(n < 0)
+	if (n < 0)
 	{
 		return (-1);
 	}
-  if(n==0)  
-    return(1);
+	return ((n == 0) ? 1 : (n * factorial(n - 1)));
 
-  return(n*factorial(n-1));
 }

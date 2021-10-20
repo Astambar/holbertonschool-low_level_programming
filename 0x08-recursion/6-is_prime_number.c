@@ -15,9 +15,9 @@ int is_prime_number(int n)
 /**
  * traitement_prime - traitement nombre premier
  * @n: nombre tester
- * @i: iterator
+ * @i: iterateur
  *
- * Return: 1 if n is prime, 0 if not
+ * Return: 1 si c'est un nombre premier, 0 sinon
  */
 int traitement_prime(int n, int i)
 {
