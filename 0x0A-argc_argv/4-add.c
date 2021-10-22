@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "100-atoi.c"
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - name file
@@ -9,33 +10,26 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int main(int argc, char *argv[]__attribute__((unused)))
+int main(int argc, char **argv)
 {
-	int result = 0, i, j, k = 1, num;
+	int i, sum, total;
 
-	if ((argc - 1) == 0)
+	sum = 0;
+	if (argc < 1)
+		printf("%d\n", 0);
+	while (argc-- && argc > 0)
 	{
-	return (printf("%d test\n", 1));
-	}
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (i = 0; argv[argc][i] != '\0'; i++)
 		{
-			if (argv[i][j] > '9' || argv[i][j] < '0')
+			if (!(isdigit(argv[argc][i])))
 			{
-				puts("Error");
+				printf("%s\n", "Error");
 				return (1);
 			}
 		}
+		total = atoi(argv[argc]);
+		sum += total;
 	}
-	for (k = 1; k < argc; k++)
-	{
-		num = _atoi(argv[k]);
-		if (num >= 0)
-		{
-			result += num;
-		}
-	}
-	printf("%d\n", result);
+	printf("%d\n", sum);
 	return (0);
 }
