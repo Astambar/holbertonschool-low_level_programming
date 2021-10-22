@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - name file
- * @argc: The character to print
- *  @argv: The character to print
- * Return: On success 1.
- * 
+ * main - 100-change.c
+ * @argc: variable primaire
+ *  @argv: varianle proùaote
+ * Return: success 1.
  */
 
 int main(int argc, char *argv[])
@@ -30,11 +29,11 @@ int main(int argc, char *argv[])
 	while (cents)
 	{
 		cents -= money[i];
-		count_coins += 1; 
-		if (cents < 0) 
+		count_coins += 1;
+		if (cents < 0)
 		{
 			cents += money[i];
-			count_coins -= 1; 
+			count_coins -= 1;
 			i += 1;
 		}
 	}
