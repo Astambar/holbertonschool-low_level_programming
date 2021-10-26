@@ -4,8 +4,8 @@
 
 /**
  * **alloc_grid - prints buffer in hexa
- * @width: largeur tableau
- * @height: hauteur tableau
+ * @width: largeur
+ * @height: string second
  * Return: Nothing.
  */
 int **alloc_grid(int width, int height)
@@ -26,8 +26,11 @@ int **array_integer;
 		array_integer[i] = (int *) malloc(sizeof(int) * width);
 		if (array_integer[i] == NULL)
 		{
+			free(array_integer);
 			for (j = 0; j <= i; j++)
+			{
 				free(array_integer[j]);
+			}
 			return (NULL);
 		}
 	}
