@@ -4,27 +4,31 @@
 #include <string.h>
 
 /**
- * *_strdup - prints buffer in hexa
- * @str: char
+ * *create_array - prints buffer in hexa
+ * @c: char
+ * @size: the size of the memory to print
  * Return: Nothing.
  */
 char *_strdup(char *str)
 {
-    unsigned int len = strlen(str), i;
-    char *result = malloc(sizeof(char) * (len + 1));
+    unsigned int i;
+    char *result;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	if (result == NULL)
+	for(i = 0; str[i] != '\0'; i++)
+	{
+	}
+	result = malloc(sizeof(char) * (i + 1));
+	if(result == NULL)
 	{
 		return NULL;
 	}
-    for (i = 0; i <= len; i++)
+    for (i = 0; (result[i] = str[i]) != '\0'; i++)
 	{
-		result[i] = str[i];
 	}
 
-	return result;
+    return result;
 }
