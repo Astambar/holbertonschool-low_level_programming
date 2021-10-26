@@ -4,8 +4,8 @@
 
 /**
  * free_grid - prints buffer in hexa
- * @width: largeur
- * @height: string second
+ * @grid: tableau
+ * @height: hauteur tableau
  * Return: Nothing.
  */
 
@@ -14,12 +14,13 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
-	if (grid == NULL || height == NULL)
+	if (grid == NULL || height == 0)
 		return;
 
 	for (i = 0; i < height; i++)
 	{
 		free(grid[i]);
 	}
+
 	free(grid);
 }
