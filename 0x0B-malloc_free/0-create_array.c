@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 /**
- * *create_array - prints buffer in hexa
- * @c: char
- * @size: the size of the memory to print
- * Return: Nothing.
+ * *create_array - reset value pointer
+ *
+ * @size: taille
+ * @c: chaine
+ * Return: char*
  */
 char *create_array(unsigned int size, char c)
 {
