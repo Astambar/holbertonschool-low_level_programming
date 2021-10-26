@@ -14,7 +14,9 @@ int **array_integer;
 	int i, j;
 
 	if (height <= 0 || width <= 0)
+	{
 		return (NULL);
+	}
 
 	array_integer = (int **) malloc(sizeof(int *) * height);
 
