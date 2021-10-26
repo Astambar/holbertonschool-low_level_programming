@@ -19,18 +19,20 @@ int **array_integer;
 	array_integer = (int **) malloc(sizeof(int *) * height);
 
 	if (array_integer == NULL)
+	{
+		free(array_integer);
 		return (NULL);
-
+	}
 	for (i = 0; i < height; i++)
 	{
 		array_integer[i] = (int *) malloc(sizeof(int) * width);
 		if (array_integer[i] == NULL)
 		{
-			free(array_integer);
 			for (j = 0; j <= i; j++)
 			{
 				free(array_integer[j]);
 			}
+			free(array_integer[i]);
 			return (NULL);
 		}
 	}
