@@ -4,9 +4,8 @@
 #include <string.h>
 
 /**
- * *create_array - prints buffer in hexa
- * @c: char
- * @size: the size of the memory to print
+ * *_strdup - prints buffer in hexa
+ * @str: char
  * Return: Nothing.
  */
 char *_strdup(char *str)
