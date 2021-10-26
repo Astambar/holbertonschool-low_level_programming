@@ -32,7 +32,7 @@ int **array_integer;
 			{
 				free(array_integer[j]);
 			}
-			free(array_integer[i]);
+			free(array_integer);
 			return (NULL);
 		}
 	}
