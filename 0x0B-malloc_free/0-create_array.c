@@ -9,14 +9,14 @@
  * Return: Nothing.
  */
 char *create_array(unsigned int size, char c)
- {
-	 char *pointer;
+{
+	char *pointer;
 	unsigned int i;
 
-	 if(size == 0)
-	 {
-		 return (NULL);
-	 }
+	if (size == 0)
+	{
+		return (NULL);
+	}
 
 	pointer = (char *) malloc(sizeof(char) * size);
 
@@ -33,4 +33,4 @@ char *create_array(unsigned int size, char c)
 	*(pointer + i) = '\0';
 
 	return (pointer);
- }
+}
