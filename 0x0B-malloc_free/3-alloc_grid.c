@@ -30,7 +30,7 @@ int **array_integer;
 		{
 			for (j = 0; j <= i; j++)
 			{
-				free(array_integer[j]);
+				free(array_integer[i][j]);
 			}
 			free(array_integer);
 			return (NULL);
