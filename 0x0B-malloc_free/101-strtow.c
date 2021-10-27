@@ -34,6 +34,7 @@ char **strtow(char *str)
 		word++;
 		}
 	}
+	printf("nombre mot : %d\n",word);
 	/* TABLE*/
 
 	word_table = (char **) malloc(sizeof(char *) * (word + 1));
