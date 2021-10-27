@@ -4,9 +4,8 @@
 #include <stdlib.h>
 
 /**
- * *argstostr- prints a grid of integers
- * @ac: the address of the two dimensional grid
- * @av: width of the grid
+ * **strtow- prints a grid of integers
+ * @str: the address of the two dimensional grid
  * Return: Nothing.
  */
 
@@ -14,14 +13,12 @@ char **strtow(char *str)
 {
 	int i = 0, word = 0, j = 0, len_str = 0, len_word = 0;
 	char **word_table;
-	if(str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
-/**
- * count words
- */
-	if (*(str + 0) == ' ')
+/*count words*/
+	if (str[0] == ' ')
 	{
 		for (i = i; *(str + i) == ' '; i++)
 		{
@@ -37,9 +34,7 @@ char **strtow(char *str)
 		word++;
 		}
 	}
-	/**
-	 * TABLE
-	 */
+	/* TABLE*/
 
 	word_table = (char **) malloc(sizeof(char *) * (word + 1));
 	if (word_table == NULL)
