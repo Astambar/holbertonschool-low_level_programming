@@ -25,11 +25,13 @@ char *argstostr(int ac, char **av)
 			size++;
 		size++; /* reserved for '\n' */
 	}
-	size = size + 1; /* reserved for all including '\0' */
 
 	pointer = malloc(sizeof(char) * (size + 1));
 	if (pointer == NULL)
+	{
 		return (NULL);
+	}
+
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
