@@ -3,21 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * **strtow- prints a grid of integers
- * @str: the address of the two dimensional grid
- * Return: Nothing.
- */
 
-char **strtow(char *str)
+int word_count(char *str)
 {
-	int i = 0, word = 0, j = 0, len_str = 0, len_word = 0;
-	char **word_table;
-	if (str == NULL || *str == '\0')
-	{
-		return (NULL);
-	}
-/*count words*/
+	int word = 0, i = 0;
 	if (str[0] == ' ')
 	{
 		for (i = i; *(str + i) == ' '; i++)
@@ -38,6 +27,25 @@ char **strtow(char *str)
 		word++;
 		}
 	}
+	return (word);
+}
+
+/**
+ * **strtow- prints a grid of integers
+ * @str: the address of the two dimensional grid
+ * Return: Nothing.
+ */
+
+char **strtow(char *str)
+{
+	int i = 0, word = 0, j = 0, len_str = 0, len_word = 0;
+	char **word_table;
+	if (str == NULL || *str == '\0')
+	{
+		return (NULL);
+	}
+/*count words*/
+word = word_count(str);
 	if(word == 0)
 	{
 		return(NULL);
