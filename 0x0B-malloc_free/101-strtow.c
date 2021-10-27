@@ -65,6 +65,11 @@ char **strtow(char *str)
 		len_str++;
 	}
 	word_table[i] = (char *) malloc(sizeof(char) * (len_word + 1));
+	if(word_table[i] == NULL)
+	{
+		free(word_table[i]);
+		return (NULL);
+	}
 		while(*str != ' ' && *str != '\0')
 		{
 			word_table[i][j] = *str;
