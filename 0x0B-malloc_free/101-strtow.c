@@ -38,6 +38,10 @@ char **strtow(char *str)
 		word++;
 		}
 	}
+	if(word == 0)
+	{
+		return(NULL);
+	}
 	/* TABLE*/
 
 	word_table = (char **) malloc(sizeof(char *) * (word + 1));
