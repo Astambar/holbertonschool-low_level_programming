@@ -75,6 +75,7 @@ char **strtow(char *str)
 			word_table[i][j] = *str;
 			j++;
 			str++;
+			len_str++;
 		}
 		word_table[i][j] = '\0';
 	}
