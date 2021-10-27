@@ -24,6 +24,10 @@ char **strtow(char *str)
 		{
 		}
 	}
+	else
+	{
+		word++;
+	}
 	for(i = i; *(str + i) != '\0'; i++)
 	{
 		if(*(str + i) == ' ')
