@@ -44,7 +44,7 @@ char **strtow(char *str)
 	}
 	/* TABLE*/
 
-	word_table = (char **) malloc(sizeof(char *) * (word + 1));
+	word_table = (char **) malloc(sizeof(char *) * (word + 2));
 	if (word_table == NULL)
 	{
 		free(word_table);
