@@ -12,7 +12,7 @@
 
 char **strtow(char *str)
 {
-	int i = 0, word = 0, j = 0, len_str = 0, len_word;
+	int i = 0, word = 0, j = 0, len_str = 0, len_word = 0;
 	char **word_table;
 	if(str == NULL || *str == '\0')
 	{
