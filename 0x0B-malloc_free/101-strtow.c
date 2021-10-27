@@ -58,7 +58,7 @@ word = word_count(str);
 
 	/* TABLE*/
 
-	word_table = (char **) malloc(sizeof(char *) * (word + 1));
+	word_table = (char **) malloc(sizeof(char *) * (word + 2));
 	if (word_table == NULL)
 	{
 		free(word_table);
@@ -73,7 +73,7 @@ word = word_count(str);
 		len_word = 0;
 	while (str[len_str] != ' ' && str[len_str] != '\0')
 		len_word++, len_str++;
-	word_table[i] = (char *) malloc((3 + (sizeof(char) * len_word)));
+	word_table[i] = (char *) malloc((2 + (sizeof(char) * len_word)));
 	if (word_table[i] == NULL)
 	{
 		free(word_table[i]);
