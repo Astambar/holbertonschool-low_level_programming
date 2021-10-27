@@ -67,7 +67,7 @@ char **strtow(char *str)
 		len_word++;
 		len_str++;
 	}
-	word_table[i] = (char *) malloc(sizeof(char) * (len_word + 2));
+	word_table[i] = (char *) malloc(sizeof(char) * (len_word + 3));
 	if(word_table[i] == NULL)
 	{
 		free(word_table[i]);
