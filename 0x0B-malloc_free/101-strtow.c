@@ -3,10 +3,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/**
+ * word_count - compte mes mots
+ *
+ * @str: toto
+ * Return: int
+ */
 int word_count(char *str)
 {
 	int word = 0, i = 0;
+
 	if (str[0] == ' ')
 	{
 		for (i = i; *(str + i) == ' '; i++)
@@ -17,11 +23,11 @@ int word_count(char *str)
 	{
 		word++;
 	}
-	for(i = i; *(str + i) != '\0'; i++)
+	for (i = i; *(str + i) != '\0'; i++)
 	{
-		if(*(str + i) == ' ')
+		if (*(str + i) == ' ')
 		{
-			for(i = i; *(str + i) == ' '; i++)
+			for (i = i; *(str + i) == ' '; i++)
 			{
 			}
 		word++;
@@ -40,16 +46,16 @@ char **strtow(char *str)
 {
 	int i = 0, word = 0, j = 0, len_str = 0, len_word = 0;
 	char **word_table;
+
 	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
 /*count words*/
 word = word_count(str);
-	if(word == 0)
-	{
-		return(NULL);
-	}
+	if (word == 0)
+		return (NULL);
+
 	/* TABLE*/
 
 	word_table = (char **) malloc(sizeof(char *) * (word + 1));
@@ -58,36 +64,23 @@ word = word_count(str);
 		free(word_table);
 		return (NULL);
 	}
-	for(i = 0; i < word; i++)
+	for (i = 0; i < word; i++)
 	{
 		j = 0;
-		if(*str == ' ')
-		{
-			while(*str == ' ')
-			{
-				str++;
-				len_str++;
-			}
-		}
+		if (*str == ' ')
+			while (*str == ' ')
+				str++, len_str++;
 		len_word = 0;
-	while(str[len_str] != ' ' && str[len_str] != '\0')
-	{
-		len_word++;
-		len_str++;
-	}
+	while (str[len_str] != ' ' && str[len_str] != '\0')
+		len_word++, len_str++;
 	word_table[i] = (char *) malloc((3 + (sizeof(char) * len_word)));
-	if(word_table[i] == NULL)
+	if (word_table[i] == NULL)
 	{
 		free(word_table[i]);
 		return (NULL);
 	}
-		while(*str != ' ' && *str != '\0')
-		{
-			word_table[i][j] = *str;
-			j++;
-			str++;
-			len_str++;
-		}
+		while (*str != ' ' && *str != '\0')
+			word_table[i][j] = *str, j++, str++, len_str++;
 		word_table[i][j] = '\0';
 	}
 	return (word_table);
