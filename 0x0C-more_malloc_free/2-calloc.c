@@ -29,13 +29,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-
 	var_memory_allocation = malloc(size * nmemb);
-
 	if (var_memory_allocation == NULL)
 		return (NULL);
-
 	_memset(var_memory_allocation, 0, nmemb * size);
-
 	return (var_memory_allocation);
 }
