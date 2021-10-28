@@ -23,7 +23,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	string = malloc(sizeof(char) * (len_string) + 1);
 
 	if (!string)
+	{
+		free(string);
 		return (NULL);
+	}
+
 	if (s1)
 		while (i < len_s1)
 			string[i] = s1[i], i++;
