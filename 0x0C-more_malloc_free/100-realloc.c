@@ -4,10 +4,10 @@
 #include <string.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
+ * *_realloc - prints buffer in hexa
+ * @ptr: the address of memory to print
+ * @old_size: vieille taille
+ * @new_size: nouvelle taille
  * Return: Nothing.
  */
 
