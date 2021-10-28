@@ -1,96 +1,118 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
- * is_digit - verifie que la chaine est un nombre
- * @s: chaine à tester
+ * _putstr - prints a string
  *
- * Return: 0 si c'est pas un digit sinon 1
+ * @str: the string to print
  */
-int is_digit(char *s)
-{
-	int i = 0;
 
-	for (; s[i]; i++)
-		if (s[i] < '0' || s[i] > '9')
-			return (0);
-	return (1);
+void	_putstr(char *str)
+{
+	while (*str)
+		_putchar(*str++);
 }
 
-/**
- * _strlen - retourne la longueur de la chaine
- * @s: chaine à tester
- *
- * Return: la longeur de la chaine
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	for (; s[i] != '\0'; i++)
-	;
-	return (i);
-}
 
 /**
- * errors - gestion d'erreur du main
+ * exit_error - exits the program with error message
  */
-void errors(void)
+
+void	exit_error(void)
 {
-	printf("Error\n");
+	_putstr("Error\n");
 	exit(98);
 }
 
 /**
- * main - multiplies deux nombre positif
- * @argc: argument = nombre
- * @argv: tableau d' arguments
+ * check_digits_len - check if string contains only digits
  *
- * Return: toujour 0 en cas de succés
+ * @str: the string to test
+ *
+ * Return: length if only digits, exit if false
  */
-int main(int argc, char *argv[])
+
+int		check_digits_len(char *str)
 {
-	char *string1, *string2;
-	int len_digit1, len_digit2, len_digit, i, calculate, digit1, digit2, *result, a = 0;
+	int i = 0;
 
-	string1 = argv[1], string2 = argv[2];
-	if (argc != 3 || !is_digit(string1) || !is_digit(string2))
-		errors();
-
-	len_digit1 = _strlen(string1), len_digit2 = _strlen(string2);
-	len_digit = len_digit1 + len_digit2 + 1;
-	result = malloc(sizeof(int) * len_digit);
-	if (!result)
-		return (1);
-	for (i = 0; i <= len_digit1 + len_digit2; i++)
-		result[i] = 0;
-	/* calcul result*/
-	for (len_digit1 -= 1; len_digit1 >= 0; len_digit1--)
-	{
-		digit1 = string1[len_digit1] - '0';
-		calculate = 0;
-		for (len_digit2 = _strlen(string2) - 1; len_digit2 >= 0; len_digit2--)
+	if (str != NULL)
+		while (str[i])
 		{
-			digit2 = string2[len_digit2] - '0';
-			calculate += result[len_digit1 + len_digit2 + 1] + (digit1 * digit2);
-			result[len_digit1 + len_digit2 + 1] = calculate % 10;
-			calculate /= 10;
+			if (str[i] >= '0' && str[i] <= '9')
+				i++;
+			else
+				exit_error();
 		}
-		if (calculate > 0)
-			result[len_digit1 + len_digit2 + 1] += calculate;
-	}
-	/* print result */
-	for (i = 0; i < len_digit - 1; i++)
+	return (i);
+}
+
+/**
+ * init_memory - initialise len bytes of sizeof(int) and set them to 0
+ *
+ * @len: the length of the array
+ *
+ * Return: a pointer to the allocated memory
+ */
+
+int		*init_memory(int len)
+{
+	int	*array, i = 0;
+
+	array = malloc(sizeof(int) * len);
+	if (!array)
+		exit_error();
+	while (i < len)
+		array[i++] = 0;
+	return (array);
+}
+
+/**
+ * main - multiplies two positive numbers
+ *
+ * @argc: number of arguments
+ * @argv: the arguments
+ *
+ * Return: 0
+ */
+
+int		main(int argc, char **argv)
+{
+	int		*res, len1, len2, i1, i2, i = 0;
+	int		a = 0, b = 0, ret, tmp, i_res1, i_res2;
+
+	if (argc != 3 || argv[1] == NULL || argv[2] == NULL)
+		exit_error();
+	len1 = check_digits_len(argv[1]);
+	len2 = check_digits_len(argv[2]);
+	res = init_memory(len1 + len2);
+	i1 = len1 - 1;
+	i_res1 = 0;
+	while (i1 >= 0)
 	{
-		if (result[i])
-			a = 1;
-		if (a)
-			_putchar(result[i] + '0');
+		ret = 0;
+		a = argv[1][i1] - '0';
+		i2 = len2 - 1;
+		i_res2 = 0;
+		while (i2 >= 0)
+		{
+			b = argv[2][i2] - '0';
+			tmp = a * b + res[i_res1 + i_res2] + ret;
+			ret = tmp / 10;
+			res[i_res1 + i_res2] = tmp % 10;
+			i2--;
+			i_res2++;
+		}
+		if (ret > 0)
+			res[i_res1 + i_res2] += ret;
+		i1--;
+		i_res1++;
 	}
-	if (!a)
-		_putchar('0');
+	i = i_res1 + i_res2 - 1;
+	while (res[i] == 0 && i > 0)
+		i--;
+	while (i >= 0)
+		_putchar(res[i--] + '0');
 	_putchar('\n');
-	free(result);
+	free(res);
 	return (0);
 }
