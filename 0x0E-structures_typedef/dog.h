@@ -7,8 +7,7 @@
  * @age: age du chien
  * @owner: prorpriétaire du chiens
  */
-#include <stdio.h>
-#include <stdlib.h>
+
 
 typedef struct dog
 {
