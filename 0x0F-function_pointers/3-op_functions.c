@@ -3,7 +3,7 @@
  * op_add - c'est  qu'une addition...
  * @a: nombre 1
  * @b: nombre  2
- * @Return: result 
+ * Return: result
  */
 int op_add(int a, int b)
 {
@@ -13,7 +13,7 @@ int op_add(int a, int b)
  * op_sub - c'est  qu'une différence...
  * @a: nombre 1
  * @b: nombre 2
- * @Return: difference
+ * Return: difference
  */
 int op_sub(int a, int b)
 {
@@ -23,7 +23,7 @@ int op_sub(int a, int b)
  * op_mul - c'est  qu'une multiplication...
  * @a: nombre 1
  * @b: nombre 2
- * @Return: multiplication
+ * Return: multiplication
  */
 int op_mul(int a, int b)
 {
@@ -33,7 +33,7 @@ int op_mul(int a, int b)
  * op_div - c'est  qu'une division...
  * @a: nombre 1
  * @b: nombre 2
- * @Return: division
+ * Return: division
  */
 int op_div(int a, int b)
 {
@@ -43,7 +43,7 @@ int op_div(int a, int b)
  * op_mod - c'est  qu'un reste de division...
  * @a: nombre 1
  * @b: nombre 2
- * @Return: reste de la division
+ * Return: reste de la division
  */
 int op_mod(int a, int b)
 {
