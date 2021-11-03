@@ -5,7 +5,6 @@
  * main - affiche sont propre opcode
  * @argc: nombre d'argument
  * @argv: mes arguments
- *
  * Return: 0 en cas de succés
  */
 int main(int argc, char *argv[])
