@@ -1,9 +1,9 @@
 #include "3-calc.h"
 
 /**
-* main - print result with FP
-* @argc: nb of arguments
-* @argv: arguments
+* main - fonction pour imprimer le résultat de l'opération
+* @argc: le nombre d'argument
+* @argv: les arguments
 *
 * Return: 0
 * Error: 1
@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
 
 	result = get_op_func(argv[2]);
 
