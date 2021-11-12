@@ -1,18 +1,18 @@
 #include "lists.h"
 /**
- * print_list - prints all the elements of a list_t list.
- * @h: list to print
- * Description: Print elements of a list.
- * Return: number of nodes
+ * print_list - imprime les élément connecté au noeud
+ * @h: liste des élément à imprimer
+ * Description: imprime les élément de la liste
+ * Return: nombre de noeud
  */
 size_t print_list(const list_t *h)
 {
-	int n = 0;
+	int i = 0;
 
-	for (; h; n++, h = h->next)
+	for (; h; i++, h = h->next)
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s\n", h->len, h->str);
-	return (n);
+	return (i);
 }
