@@ -1,8 +1,7 @@
 #include <stdio.h>
 void printFirstTime(void)__attribute__((constructor));
 /**
- * printFirstTime - Prints a string before the
- *        main function is executed.
+ * printFirstTime - executer une fonction avant le main
  */
 void printFirstTime(void)
 {
