@@ -48,18 +48,14 @@ int free_listint_safe(listint_t **h)
 
 	if (nodes == 0)
 	{
-		for (nodes = 0; h && *h; nodes++)
-		{
-			aux = (*h)->next;
-			free(*h);
-			*h = aux;
-		}
+		for (nodes = 0; h && *h; nodes++, aux = (*h).next, free(*h), *h = aux)
+		;
 		h = NULL;
 		return (nodes);
 	}
 	for (id = 0; id < nodes; id++)
 	{
-		aux = (*h)->next;
+		aux = (*h).next;
 		free(*h);
 		*h = aux;
 	}
