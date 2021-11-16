@@ -20,6 +20,19 @@ typedef struct list_s
 	unsigned int len;
 	struct list_s *next;
 } list_t;
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structureZ
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+
+} listint_t;
 
 /*Prototypes*/
 listint_t *find_listint_loop(listint_t *head);
