@@ -41,10 +41,10 @@ int floyds_cycle2(const listint_t *head)
  * @h: Linked list.
  * Return: Number of nodes in list.
  */
-int free_listint_safe(listint_t **h)
+size_t free_listint_safe(listint_t **h)
 {
 	listint_t *aux;
-	int nodes = floyds_cycle2(*h), id;
+	size_t nodes = floyds_cycle2(*h), id;
 
 	if (nodes == 0)
 	{

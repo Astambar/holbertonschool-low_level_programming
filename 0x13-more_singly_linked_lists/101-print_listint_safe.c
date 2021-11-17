@@ -48,16 +48,14 @@ int print_listint_safe(const listint_t *head)
 	{
 		for (nodes = 0; head; nodes++)
 		{
-			printf("[%p] %i\n", (void *)head, head->n);
+			printf("[%p] %i\n", (void *)head, (*head).n);
 			head = head->next;
 		}
 		return (nodes);
 	}
-	for (aux = 0; aux < nodes; aux++)
-	{
-		printf("[%p] %i\n", (void *)head, head->n);
-		head = head->next;
-	}
+	for (aux = 0; aux < nodes; aux++, head = (*head).next)
+		printf("[%p] %i\n", (void *)head, (*head).n);
+
 	printf("-> [%p] %i\n", (void *)head, head->n);
 
 	return (nodes);
