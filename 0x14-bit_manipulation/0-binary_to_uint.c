@@ -1,25 +1,47 @@
 #include "main.h"
 
 /**
- * binary_to_uint - convert binary string to decimal
- * @b: binary string
+ *power - calculates an exponent
+ *@base: the base of the exponent
+ *@power: what to raise the base to
  *
- * Return: decimal (unsigned int)
+ *Return: the exponent value
  */
+int power(int base, int power)
+{
+	int exponent = 1;
 
+	while (power > 0)
+	{
+		exponent *= base;
+		power--;
+	}
+	return (exponent);
+}
+/**
+ *binary_to_uint - converts a binary number to unsigned int
+ *@b: a pointer to a string of 0 and 1 characters
+ *
+ *Return: the integer conversion, or 0 if there is a non-one or non-zero
+ *character or if b is NULL
+ */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal, i;
+	int i = 0;
+	unsigned int j = 0;
+	unsigned int num = 0;
 
-	for (decimal = 0, i = 0; b[i] != '\0'; i++)
+	if (b == NULL)
+		return (0);
+
+	for (; *(b + i) != '\0'; i++)
+	;
+	i--;
+	for (; i >= 0; j++, i--)
 	{
-		if (b[i] == '1')
-			decimal = (decimal << 1) | 1;
-		else if (b[i] == '0')
-			decimal <<= 1;
-		else if (b[i] != '0' && b[i] != '1')
-			return (0);
+		if (*(b + j) != '0' && *(b + j) != '1')
+				return (0);
+		num += ((*(b + j) - '0') * power(2, i));
 	}
-
-	return (decimal);
+	return (num);
 }
