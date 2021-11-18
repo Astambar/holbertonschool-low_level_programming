@@ -11,11 +11,8 @@ int power(int base, int power)
 {
 	int exponent = 1;
 
-	while (power > 0)
-	{
-		exponent *= base;
-		power--;
-	}
+	for (; power > 0; exponent *= base, power--)
+	;
 	return (exponent);
 }
 /**
