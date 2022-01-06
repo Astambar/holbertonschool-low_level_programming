@@ -1,10 +1,9 @@
 #include "lists.h"
 
-
 /**
- * print_dlistint- prints elements of a list
- * @h: pointer to list object
- * Return: Number of nodes
+ * print_dlistint- imprime les elements de la liste
+ * @h: pointer de la list
+ * Return: Le nombre de noeud
  */
 
 size_t print_dlistint(const dlistint_t *h)
