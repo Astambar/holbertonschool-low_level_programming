@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * get_dnodeint_at_index - finds a specific node of a linked list
- * @head: pointer to the beginning of the list
- * @index: index of the node to retrieve
+ * get_dnodeint_at_index - trouve un nœud spécifique d'une liste chaînée
+ * @head: pointer vers la liste chaînée
+ * @index: index du noeud à récupérer
  *
- * Return: pointer to the indexed node, or NULL on failure
+ * Return: Null en cas d'erreur sinon retourne le noeud indexée
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
