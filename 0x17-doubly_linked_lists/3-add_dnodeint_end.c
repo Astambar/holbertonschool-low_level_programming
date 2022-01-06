@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * add_dnodeint- - ajoute un nœud à la fin d'une liste chaînée
+ * add_dnodeint_end- - ajoute un nœud à la fin d'une liste chaînée
  * @head: pointer vers la liste chaînée
- * @n: integer
- * Return: le nouveau nombre de noeud
+ * @n: valeur à ajouter au nouveau noeud
+ * Return: pointeur vers le nouveau nœud, ou NULL en cas d'échec
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
