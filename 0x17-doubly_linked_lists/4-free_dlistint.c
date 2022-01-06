@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * free_dlistint - free a dlistint_t list
@@ -8,8 +9,12 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *nexte;
+	dlistint_t *next;
 
-	for (; head; nexte = (*head).nexte, free(head), head = nexte)
-	;
+	while (head != NULL)
+	{
+		next = head->next;
+		free(head);
+		head = next;
+	}
 }
