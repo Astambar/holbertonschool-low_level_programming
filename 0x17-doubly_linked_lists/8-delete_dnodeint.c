@@ -28,7 +28,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	for (; i < index; current = current->next, i++)
+	for (; i < index; current = (*current).next, i++)
 		if (!(*current).next)
 			return (-1);
 	(*(*current).prev).next = (*current).next;
