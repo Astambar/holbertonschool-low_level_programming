@@ -3,7 +3,14 @@
 
 
 def island_perimeter(grid):
-    """Return the island perimeter"""
+    """_summary_
+
+    Args:
+        grid (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     width = len(grid[0])
     height = len(grid)
     edges = 0
@@ -13,9 +20,9 @@ def island_perimeter(grid):
         lenI = len(grid[i]) - 1
         for j in range(width):
             if grid[i][j] == 1:
-                if 0 in grid[i - 1][j]:
+                if 0 in [i, grid[i - 1][j]]:
                     edges += 1
-                if 0 in [j, i, grid[i][j - 1]]:
+                if 0 in [j, grid[i][j - 1]]:
                     edges += 1
                 if i == lenH or grid[i + 1][j] == 0:
                     edges += 1
