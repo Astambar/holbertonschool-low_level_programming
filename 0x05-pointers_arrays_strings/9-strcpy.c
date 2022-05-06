@@ -1,12 +1,6 @@
-#include "main.h"
 #include <string.h>
 #include <stdio.h>
-/**
-* *_strcpy - reset value pointer
-* Return: Always 0.
-* @dest: pointer
-* @src: pointer
-*/
+
 char *_strcpy(char *dest, char *src)
 {
 	int i, len;
