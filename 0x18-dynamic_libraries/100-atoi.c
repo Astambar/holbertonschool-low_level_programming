@@ -35,6 +35,6 @@ int _atoi(char *s)
 		}
 	}
 
-return (f == 0) ? (0) : (result);
-	
+return ((f == 0) ? (0) : (result));
+
 }
