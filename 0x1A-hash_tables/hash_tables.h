@@ -42,4 +42,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
 
+shash_table_t *shash_table_create(unsigned long int size)
+void shash_table_print_rev(const shash_table_t *ht)
+void shash_table_print(const shash_table_t *ht)
+void node_sorted_by_hash_key(shash_table_t *ht, shash_node_t *node)
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+shash_node_t *create_node(const char *key, const char *value)
+void shash_table_delete(shash_table_t *ht)
+char *shash_table_get(const shash_table_t *ht, const char *key)
 #endif /* _HASH_TABLES_H_ */
