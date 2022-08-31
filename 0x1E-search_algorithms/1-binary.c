@@ -1,17 +1,19 @@
 #include "search_algos.h"
 
 /**
- * binary_search - fonction qui recherche une valeur
- * dans un tableau trié d'entiers à l'aide de l'algorithme de recherche binaire
- *
- * @array : pointeur vers le premier élément du tableau dans lequel rechercher
- * @size : nombre d'éléments dans le tableau
- * @value : valeur à rechercher
- *
- * Return:
- * premier index où se trouve la valeur
- * -1 sinon
- */
+* binary_search - fonction qui recherche une valeur
+* dans un tableau trié d'entiers à l'aide de
+* l'algorithme de recherche binaire
+*
+* @array : pointeur vers le premier élément
+* du tableau dans lequel rechercher
+* @size : nombre d'éléments dans le tableau
+* @value : valeur à rechercher
+*
+* Return:
+* premier index où se trouve la valeur
+* -1 sinon
+*/
 
 int binary_search(int *array, size_t size, int value)
 {
