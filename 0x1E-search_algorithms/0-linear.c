@@ -1,17 +1,16 @@
 #include "search_algos.h"
 
-
 /**
- * linear_search - function that searches for a value in an array of integers
- * using the Linear search algorithm
+ * linear_search - fonction qui recherche une valeur dans un tableau d'entiers
+ * en utilisant l'algorithme de recherche linéaire
  *
- * @array: pointer to the first element of the array to search in
- * @size: number of elements in array
- * @value: value to search for
+ * @array : pointeur vers le premier élément du tableau dans lequel rechercher
+ * @size : nombre d'éléments dans le tableau
+ * @value : valeur à rechercher
  *
  * Return:
- *	first index where value is located
- *	-1 otherwise
+ * premier index où se trouve la valeur
+ * -1 sinon
  */
 
 int linear_search(int *array, size_t size, int value)
